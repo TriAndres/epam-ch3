@@ -5,7 +5,7 @@ import ru.practicum.lessonA.lessonA1.model.Student;
 import java.util.List;
 
 public interface StudentMemory {
-    List<Student> getStudentAll();
+    List<String> getStudentAll();
     Student createStudent(Student student);
     void updateStudent(Student student);
     Student getStudentById(long id);

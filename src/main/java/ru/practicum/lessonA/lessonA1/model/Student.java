@@ -2,8 +2,8 @@ package ru.practicum.lessonA.lessonA1.model;
 
 public class Student {
     private long id;
-    private String lastName;
     private String firstName;
+    private String lastName;
     private String middleName;
     private String dateOfBirth;
     private String address;
@@ -16,8 +16,8 @@ public class Student {
     }
 
     public Student(long id,
-                   String lastName,
                    String firstName,
+                   String lastName,
                    String middleName,
                    String dateOfBirth,
                    String address,
@@ -26,8 +26,8 @@ public class Student {
                    String course,
                    String group) {
         this.id = id;
-        this.lastName = lastName;
         this.firstName = firstName;
+        this.lastName = lastName;
         this.middleName = middleName;
         this.dateOfBirth = dateOfBirth;
         this.address = address;
@@ -45,12 +45,12 @@ public class Student {
         this.id = id;
     }
 
-    public String getGroup() {
-        return group;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -59,14 +59,6 @@ public class Student {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 
     public String getMiddleName() {
@@ -117,19 +109,25 @@ public class Student {
         this.course = course;
     }
 
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", address='" + address + '\'' +
-                ", phone='" + phone + '\'' +
-                ", faculty='" + faculty + '\'' +
-                ", course='" + course + '\'' +
-                ", group='" + group + '\'' +
-                '}';
+        return id +
+                "/" + firstName +
+                "/" + lastName +
+                "/" + middleName +
+                "/" + dateOfBirth +
+                "/" + address +
+                "/" + phone +
+                "/" + faculty +
+                "/" + course +
+                "/" + group;
     }
 }
